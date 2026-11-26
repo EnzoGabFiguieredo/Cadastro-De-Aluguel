@@ -18,11 +18,17 @@ public class BoxClimatizado extends Box {
         this.temperatura = temperatura;
     }
 
+       @Override
+    public double calcularValorMensal() {
+        return super.calcularValorMensal() + TAXA_CLIMA;
+    }
+
     @Override
     public String toString() {
         return "Box Climatizado" +
                 " | Número: " + getNumero() +
                 " | Tamanho: " + getTamanho() +
                 " | Temperatura: " + temperatura + " °C";
+                " | Valor mensal: R$ " + calcularValorMensal();
     }
 }
