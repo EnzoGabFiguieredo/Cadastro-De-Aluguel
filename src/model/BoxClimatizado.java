@@ -4,7 +4,8 @@ package model;
 public class BoxClimatizado extends Box {
 
     private double temperatura;
-
+    private static final double TAXA_CLIMA = 80.0;
+    
     public BoxClimatizado(String numero, String tamanho, double temperatura) {
         super(numero, tamanho);
         this.temperatura = temperatura;
