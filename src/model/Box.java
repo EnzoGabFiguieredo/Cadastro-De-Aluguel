@@ -12,7 +12,11 @@ public class Box {
         this.valorMensal = valorMensal;
         this.ocupado = ocupado;
     }
-
+   public Box(String numero, String tamanho) {
+      this.numero = Integer.parseInt(numero);
+      this.tamanho = tamanho;
+}
+    
     public int getNumero() {
         return numero;
     }
