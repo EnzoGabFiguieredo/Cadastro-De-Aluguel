@@ -5,9 +5,11 @@ public class BoxClimatizado extends Box {
 
     private double temperatura;
     private static final double TAXA_CLIMA = 80.0;
-    
-    public BoxClimatizado(String numero, String tamanho, double temperatura) {
-        super(numero, tamanho);
+
+    public BoxClimatizado(int numero, String tamanho, double valorMensal,
+                          boolean ocupado, double temperatura) {
+
+        super(numero, tamanho, valorMensal, ocupado);
         this.temperatura = temperatura;
     }
 
@@ -19,7 +21,7 @@ public class BoxClimatizado extends Box {
         this.temperatura = temperatura;
     }
 
-       @Override
+    @Override
     public double calcularValorMensal() {
         return super.calcularValorMensal() + TAXA_CLIMA;
     }
@@ -29,7 +31,7 @@ public class BoxClimatizado extends Box {
         return "Box Climatizado" +
                 " | Número: " + getNumero() +
                 " | Tamanho: " + getTamanho() +
-                " | Temperatura: " + temperatura + " °C";
+                " | Temperatura: " + temperatura + " °C" +
                 " | Valor mensal: R$ " + calcularValorMensal();
     }
 }
