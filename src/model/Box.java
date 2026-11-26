@@ -13,10 +13,6 @@ public class Box {
         this.ocupado = ocupado;
     }
 
-    public Box(String numero, String tamanho) {
-        
-    }
-
     public int getNumero() {
         return numero;
     }
